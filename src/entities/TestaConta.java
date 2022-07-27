@@ -22,7 +22,7 @@ public class TestaConta {
 		double valor = sc.nextDouble();
 		
 		conta.credito(valor);
-		System.out.println(conta.getSaldo());
+		System.out.println("Novo saldo " + conta.getSaldo());
 		
 
 	}
