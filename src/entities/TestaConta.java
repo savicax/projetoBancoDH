@@ -6,24 +6,28 @@ public class TestaConta {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite o numero da conta: ");
 		int numero = sc.nextInt();
-		sc.nextLine();
 		
-		String cpf = sc.nextLine();
+		System.out.println("Digite o cpf: ");
+		String cpf = sc.next();
 		
 		ContaCorrente conta = new ContaCorrente(numero, cpf);
+		System.out.println();
+
+		System.out.println("Olá, seja bem-vindo ao banco banco\n");
 		
+		conta.menuOperacao();
 		
-		System.out.println(conta.getNumero());
-		System.out.println(conta.getCpf());
-		//System.out.println(conta.getSaldo());
-		//System.out.println(conta.isAtivo());
+		conta.operacao();
 		
-		double valor = sc.nextDouble();
+		/*double valor = sc.nextDouble();
 		
-		conta.credito(valor);
-		System.out.println("Novo saldo " + conta.getSaldo());
-		
+		conta.creditarValor(valor);
+		conta.verificaSaldo();
+		conta.debitarValor(50);
+		conta.verificaSaldo();
+		//conta.pedirTalao(2);*/
 
 	}
 

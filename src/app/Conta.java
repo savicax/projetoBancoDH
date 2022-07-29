@@ -47,14 +47,14 @@ public abstract class Conta {
 		this.ativo = ativo;
 	}
 	
-	protected void debito(double valor) {
-		if(valor <= getSaldo())
-			this.saldo = saldo - valor;
-	}
-	
-	public void credito(double valor) {
-		this.saldo = saldo + valor;
-	}
+	public void debitarValor(double valorDebitado) {
+        	this.saldo = saldo - valorDebitado;
+;
+    }
+    
+    public void creditarValor(double valorCreditado) {
+    	this.saldo = saldo + valorCreditado;
+    }
 	
 	public void verificaSaldo() {
 		System.out.println("Saldo Atual: " + getSaldo());
